@@ -155,17 +155,33 @@ function initCinematicGSAPStorytelling() {
   if (document.querySelector('.hero-section')) {
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    heroTl
-      .from('.brand-badge-wrapper', { opacity: 0, scale: 0.8, duration: 0.6, delay: 0.05 })
-      .from('.hero-badge-pill', { opacity: 0, y: -20, duration: 0.65 }, '-=0.4')
-      .from('.hero-title .title-row-1', { opacity: 0, y: 30, duration: 0.75 }, '-=0.45')
-      .from('.hero-title .name-highlight', { opacity: 0, scale: 0.95, y: 20, duration: 0.75 }, '-=0.5')
-      .from('.typewriter-wrapper', { opacity: 0, y: 20, duration: 0.6 }, '-=0.45')
-      .from('.hero-lead', { opacity: 0, y: 20, duration: 0.6 }, '-=0.45')
-      .from('.hero-cta-group .btn', { opacity: 0, y: 25, stagger: 0.12, duration: 0.65 }, '-=0.35')
-      .from('.hero-metric-pill', { opacity: 0, scale: 0.88, stagger: 0.1, duration: 0.55, ease: 'back.out(1.5)' }, '-=0.3')
-      .from('.profile-visual-card', { opacity: 0, scale: 0.92, y: 35, duration: 0.85 }, '-=0.65')
-      .from('.floating-badge', { opacity: 0, scale: 0.7, stagger: 0.14, duration: 0.6, ease: 'back.out(1.8)' }, '-=0.45');
+    if (document.querySelector('.brand-badge-wrapper')) {
+      heroTl.from('.brand-badge-wrapper', { opacity: 0, scale: 0.8, duration: 0.6, delay: 0.05 });
+    }
+    if (document.querySelector('.hero-badge-pill')) {
+      heroTl.from('.hero-badge-pill', { opacity: 0, y: -20, duration: 0.65 }, '-=0.4');
+    }
+    if (document.querySelector('.hero-headline')) {
+      heroTl.from('.hero-headline', { opacity: 0, y: 30, duration: 0.75 }, '-=0.45');
+    }
+    if (document.querySelector('.dynamic-type-bar')) {
+      heroTl.from('.dynamic-type-bar', { opacity: 0, y: 20, duration: 0.6 }, '-=0.45');
+    }
+    if (document.querySelector('.hero-bio')) {
+      heroTl.from('.hero-bio', { opacity: 0, y: 20, duration: 0.6 }, '-=0.45');
+    }
+    if (document.querySelectorAll('.hero-cta-group .btn').length > 0) {
+      heroTl.from('.hero-cta-group .btn', { opacity: 0, y: 25, stagger: 0.12, duration: 0.65 }, '-=0.35');
+    }
+    if (document.querySelectorAll('.social-pills-row .social-pill').length > 0) {
+      heroTl.from('.social-pills-row .social-pill', { opacity: 0, scale: 0.88, stagger: 0.08, duration: 0.55, ease: 'back.out(1.5)' }, '-=0.3');
+    }
+    if (document.querySelector('.terminal-card')) {
+      heroTl.from('.terminal-card', { opacity: 0, scale: 0.92, y: 35, duration: 0.85 }, '-=0.65');
+    }
+    if (document.querySelectorAll('.floating-badge').length > 0) {
+      heroTl.from('.floating-badge', { opacity: 0, scale: 0.7, stagger: 0.14, duration: 0.6, ease: 'back.out(1.8)' }, '-=0.45');
+    }
   }
 
   if (typeof ScrollTrigger === 'undefined') return;
@@ -239,7 +255,7 @@ function initCinematicGSAPStorytelling() {
   });
 
   // 6. Skills Matrix Bento Grid Staggered Reveal
-  const skillCards = gsap.utils.toArray('.skill-bento-card');
+  const skillCards = gsap.utils.toArray('.skills-bento-wide .bento-box');
   if (skillCards.length > 0) {
     gsap.from(skillCards, {
       opacity: 0,
@@ -249,7 +265,7 @@ function initCinematicGSAPStorytelling() {
       duration: 0.7,
       ease: 'back.out(1.2)',
       scrollTrigger: {
-        trigger: '#skills .skills-bento-grid',
+        trigger: '#skills .skills-bento-wide',
         start: 'top 84%',
         toggleActions: 'play none none reverse'
       }
