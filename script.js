@@ -56,11 +56,11 @@ function initTypewriter() {
   if (!target) return;
 
   const phrases = [
-    "Full-Stack Web Engineering 💻",
-    "MERN Stack Architectures 🚀",
+    "Full-Stack Web Development 💻",
+    "MERN Stack Projects 🚀",
     "Python & Google Gemini AI 🤖",
-    "NLP & Semantic Candidate Ranking ⚡",
-    "High-Performance REST APIs 🔒"
+    "NLP & Data Science Fundamentals ⚡",
+    "REST APIs & Database Design 🔒"
   ];
 
   let phraseIdx = 0;
@@ -210,12 +210,12 @@ const projectData = {
   "1": {
     badge: "Full-Stack & Gemini AI",
     title: "Smart Placement Portal",
-    desc: "A full-stack campus recruitment platform built with the MERN stack and Google Gemini AI, designed to assist college placement cells and applicants.",
+    desc: "A full-stack campus placement management web application built with the MERN stack and Google Gemini AI to assist college placement cells and applicants.",
     keyChallenges: [
-      "Secured discrete role-based workflows (Students vs. Recruiters) using stateless JSON Web Tokens (JWT) and encrypted password hashing with bcrypt.",
-      "Engineered an automated resume matching engine that leverages Google Gemini API to analyze candidate profiles against job descriptions.",
-      "Integrated an AI mock interview bot capable of generating dynamic technical questions based on candidate-selected domains.",
-      "Optimized MongoDB collection schemas and compound indexing to ensure sub-100ms response times on candidate searches."
+      "Implemented role-based authentication (Students vs. Recruiters) using JSON Web Tokens (JWT) and bcrypt password hashing.",
+      "Integrated Google Gemini API to assist in automated resume skill analysis and job matching suggestions.",
+      "Built a practice interview tool generating dynamic questions based on selected technical domains.",
+      "Structured MongoDB collections and indexes for efficient candidate queries and data retrieval."
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Gemini AI", "JWT", "Tailwind CSS"],
     githubUrl: "https://github.com/Abhijeet0848/Placement-portal",
@@ -224,12 +224,12 @@ const projectData = {
   "2": {
     badge: "AI / NLP & Backend",
     title: "TalentPulse AI — Automated Resume Screening",
-    desc: "An intelligent resume parsing and semantic ranking microservice built using Python, Scikit-learn, and Natural Language Processing algorithms.",
+    desc: "A resume parsing and semantic ranking application built using Python, Flask, Scikit-learn, and Natural Language Processing.",
     keyChallenges: [
-      "Built an end-to-end NLP text preprocessing pipeline with tokenization, stopword removal, and TF-IDF vectorization.",
-      "Implemented Cosine Similarity algorithms to compute high-accuracy relevance scores between resume text and job descriptions in sub-50ms.",
-      "Created recruiter analytics dashboards displaying candidate match distributions and keyword overlap frequencies.",
-      "Packaged backend services into Docker containers backed by PostgreSQL for reproducible production deployment."
+      "Built an NLP text preprocessing pipeline with tokenization, stopword removal, and TF-IDF vectorization.",
+      "Implemented Cosine Similarity to compute relevance scores between candidate resumes and job descriptions.",
+      "Created an analytics dashboard displaying candidate match distributions and keyword overlap summaries.",
+      "Packaged Python Flask backend with PostgreSQL database, configured with Docker for easy local setup."
     ],
     techStack: ["Python", "Flask", "Scikit-learn", "NLP (TF-IDF)", "PostgreSQL", "Docker", "Pandas"],
     githubUrl: "https://github.com/Abhijeet0848/-TalentPulse-AI-Intelligent-Resume-Screening-Talent-Intelligence-Platform",
@@ -238,11 +238,11 @@ const projectData = {
   "3": {
     badge: "Web & Database",
     title: "Online Result Management System",
-    desc: "A high-performance student academic score recording and query platform built using PHP, JavaScript, and a normalized MySQL relational database.",
+    desc: "A student academic score publication web portal built using PHP, JavaScript, and a normalized MySQL relational database.",
     keyChallenges: [
-      "Designed an asynchronous result checking interface using AJAX, allowing students to check semester marks instantly without full page reloads.",
-      "Normalized relational database schemas to Third Normal Form (3NF) to eliminate data redundancy and preserve transcript integrity.",
-      "Constructed a secure administrator portal for batch grade entry, student roll-number management, and PDF report exports."
+      "Designed an asynchronous result search using AJAX, allowing students to check semester marks instantly without full-page reloads.",
+      "Normalized relational database schemas to Third Normal Form (3NF) to organize course and student result records cleanly.",
+      "Constructed an administrative dashboard for secure batch grade entry and student report viewing."
     ],
     techStack: ["PHP", "JavaScript", "MySQL", "AJAX", "Bootstrap 5", "HTML5", "CSS3"],
     githubUrl: "https://github.com/Abhijeet0848/Online-result-system-perfect",
@@ -270,14 +270,14 @@ function initCaseStudyModal() {
         <p class="case-study-desc">${data.desc}</p>
 
         <div class="case-study-section">
-          <h4><i class="fa-solid fa-shield-halved"></i> Key Technical Solutions & Architecture</h4>
+          <h4><i class="fa-solid fa-layer-group"></i> Key Features & Implementation Details</h4>
           <ul>
             ${data.keyChallenges.map(item => `<li><i class="fa-solid fa-check"></i> <span>${item}</span></li>`).join('')}
           </ul>
         </div>
 
         <div class="case-study-section">
-          <h4><i class="fa-solid fa-layer-group"></i> Technologies & Tools</h4>
+          <h4><i class="fa-solid fa-screwdriver-wrench"></i> Technologies & Tools</h4>
           <div class="tech-pill-list">
             ${data.techStack.map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
           </div>
