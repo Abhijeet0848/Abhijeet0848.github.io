@@ -226,14 +226,16 @@ function initCinematicGSAPStorytelling() {
   gsap.utils.toArray('.section-head').forEach(head => {
     gsap.from(head.children, {
       opacity: 0,
-      y: 32,
-      duration: 0.75,
-      stagger: 0.12,
+      y: 30,
+      duration: 0.7,
+      stagger: 0.1,
       ease: 'power3.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: head,
-        start: 'top 88%',
-        toggleActions: 'play none none reverse'
+        start: 'top 92%',
+        toggleActions: 'play none none none',
+        once: true
       }
     });
   });
@@ -242,14 +244,16 @@ function initCinematicGSAPStorytelling() {
   gsap.utils.toArray('.project-showcase-card').forEach((card) => {
     gsap.from(card, {
       opacity: 0,
-      y: 50,
-      scale: 0.96,
-      duration: 0.85,
+      y: 40,
+      scale: 0.97,
+      duration: 0.75,
       ease: 'power3.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: card,
-        start: 'top 86%',
-        toggleActions: 'play none none reverse'
+        start: 'top 90%',
+        toggleActions: 'play none none none',
+        once: true
       }
     });
   });
@@ -259,15 +263,17 @@ function initCinematicGSAPStorytelling() {
   if (skillCards.length > 0) {
     gsap.from(skillCards, {
       opacity: 0,
-      y: 40,
-      scale: 0.94,
-      stagger: 0.09,
+      y: 35,
+      scale: 0.95,
+      stagger: 0.08,
       duration: 0.7,
       ease: 'back.out(1.2)',
+      clearProps: 'all',
       scrollTrigger: {
-        trigger: '#skills .skills-bento-wide',
-        start: 'top 84%',
-        toggleActions: 'play none none reverse'
+        trigger: '#skills',
+        start: 'top 90%',
+        toggleActions: 'play none none none',
+        once: true
       }
     });
   }
@@ -276,14 +282,16 @@ function initCinematicGSAPStorytelling() {
   gsap.utils.toArray('.timeline-card').forEach((card, i) => {
     gsap.from(card, {
       opacity: 0,
-      x: i % 2 === 0 ? -30 : 30,
+      x: i % 2 === 0 ? -25 : 25,
       y: 20,
-      duration: 0.8,
+      duration: 0.75,
       ease: 'power3.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: card,
-        start: 'top 86%',
-        toggleActions: 'play none none reverse'
+        start: 'top 90%',
+        toggleActions: 'play none none none',
+        once: true
       }
     });
   });
@@ -320,14 +328,16 @@ function initCinematicGSAPStorytelling() {
   if (resumeBanner) {
     gsap.from(resumeBanner, {
       opacity: 0,
-      y: 35,
-      scale: 0.97,
-      duration: 0.8,
+      y: 30,
+      scale: 0.98,
+      duration: 0.75,
       ease: 'power3.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: resumeBanner,
-        start: 'top 86%',
-        toggleActions: 'play none none reverse'
+        start: 'top 90%',
+        toggleActions: 'play none none none',
+        once: true
       }
     });
   }
@@ -336,13 +346,15 @@ function initCinematicGSAPStorytelling() {
   if (contactCard) {
     gsap.from(contactCard, {
       opacity: 0,
-      y: 40,
-      duration: 0.85,
+      y: 35,
+      duration: 0.8,
       ease: 'power3.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: contactCard,
-        start: 'top 86%',
-        toggleActions: 'play none none reverse'
+        start: 'top 90%',
+        toggleActions: 'play none none none',
+        once: true
       }
     });
   }
