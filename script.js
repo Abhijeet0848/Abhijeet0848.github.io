@@ -219,7 +219,7 @@ const projectData = {
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Gemini AI", "JWT", "Tailwind CSS"],
     githubUrl: "https://github.com/Abhijeet0848/Placement-portal",
-    liveUrl: "https://github.com/Abhijeet0848/Placement-portal"
+    liveUrl: "https://placement-portal0.netlify.app/"
   },
   "2": {
     badge: "AI / NLP & Backend",
@@ -284,6 +284,7 @@ function initCaseStudyModal() {
         </div>
 
         <div class="case-study-actions">
+          ${data.githubUrl ? `<a href="${data.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github"></i> View GitHub Repository</a>` : ''}
           ${data.liveUrl ? `<a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Link</a>` : ''}
         </div>
       `;
@@ -291,6 +292,9 @@ function initCaseStudyModal() {
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+
+      const dialog = modal.querySelector('.modal-dialog');
+      if (dialog) dialog.scrollTop = 0;
     });
   });
 
