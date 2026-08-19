@@ -284,10 +284,7 @@ function initCaseStudyModal() {
         </div>
 
         <div class="case-study-actions">
-          <a href="${data.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <i class="fa-brands fa-github"></i> View GitHub Repository
-          </a>
-          ${data.liveUrl ? `<a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Link</a>` : ''}
+          ${data.liveUrl ? `<a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Link</a>` : ''}
         </div>
       `;
 
