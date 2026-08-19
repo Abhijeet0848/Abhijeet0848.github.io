@@ -80,6 +80,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
   font-size: 16px;
 }
 
@@ -230,6 +231,19 @@ ul {
 [data-theme="dark"] .top-nav-wrapper.scrolled {
   background: rgba(9, 13, 22, 0.92);
   box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Glowing Scroll Reading Progress Bar */
+.scroll-progress-bar {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2.5px;
+  width: 0%;
+  background: linear-gradient(90deg, #2563eb, #7c3aed 50%, #06b6d4 100%);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+  z-index: 110;
+  transition: width 0.08s ease-out;
 }
 
 .nav-inner {
