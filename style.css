@@ -187,9 +187,10 @@ ul {
   border-radius: 50%;
   pointer-events: none;
   background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(124, 58, 237, 0.04) 45%, transparent 70%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateZ(0);
   z-index: 0;
   transition: opacity 0.3s ease;
+  will-change: transform;
 }
 
 [data-theme="dark"] .cursor-glow {
@@ -205,6 +206,8 @@ ul {
   z-index: 0;
   opacity: 0.55;
   animation: floatOrb 14s ease-in-out infinite alternate;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .orb-1 {

@@ -41,7 +41,7 @@ function initCursorSpotlight() {
     currentX += (mouseX - currentX) * 0.12;
     currentY += (mouseY - currentY) * 0.12;
 
-    glow.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+    glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate3d(-50%, -50%, 0)`;
     requestAnimationFrame(renderGlow);
   }
 
