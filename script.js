@@ -6,11 +6,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
-  initSmoothScroll();
+  initLenisScroll();
+  initCinematicGSAPStorytelling();
   initTheme();
   initCursorSpotlight();
   initTypewriter();
-  initScrollObserver();
   initCardTilt();
   initProjectFilters();
   initCaseStudyModal();
@@ -124,49 +124,224 @@ function initCardTilt() {
 }
 
 /* ==========================================================================
-   4. Scroll-Triggered Reveal & Animated Metric Counters
+   4. Cinematic Scroll Storytelling (GSAP & ScrollTrigger)
    ========================================================================== */
-function initScrollObserver() {
-  const reveals = document.querySelectorAll('.reveal');
+function initCinematicGSAPStorytelling() {
+  if (typeof gsap === 'undefined') {
+    initScrollObserverFallback();
+    return;
+  }
 
+  if (typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  // 1. Cinematic Top Scroll Progress Story Bar
+  const progressBar = document.getElementById('scroll-progress-bar');
+  if (progressBar && typeof ScrollTrigger !== 'undefined') {
+    gsap.to(progressBar, {
+      scaleX: 1,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: document.body,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 0.15
+      }
+    });
+  }
+
+  // 2. Hero Section Orchestrated Cinematic Entrance (Page Load)
+  if (document.querySelector('.hero-section')) {
+    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    heroTl
+      .from('.brand-badge-wrapper', { opacity: 0, scale: 0.8, duration: 0.6, delay: 0.05 })
+      .from('.hero-badge-pill', { opacity: 0, y: -20, duration: 0.65 }, '-=0.4')
+      .from('.hero-title .title-row-1', { opacity: 0, y: 30, duration: 0.75 }, '-=0.45')
+      .from('.hero-title .name-highlight', { opacity: 0, scale: 0.95, y: 20, duration: 0.75 }, '-=0.5')
+      .from('.typewriter-wrapper', { opacity: 0, y: 20, duration: 0.6 }, '-=0.45')
+      .from('.hero-lead', { opacity: 0, y: 20, duration: 0.6 }, '-=0.45')
+      .from('.hero-cta-group .btn', { opacity: 0, y: 25, stagger: 0.12, duration: 0.65 }, '-=0.35')
+      .from('.hero-metric-pill', { opacity: 0, scale: 0.88, stagger: 0.1, duration: 0.55, ease: 'back.out(1.5)' }, '-=0.3')
+      .from('.profile-visual-card', { opacity: 0, scale: 0.92, y: 35, duration: 0.85 }, '-=0.65')
+      .from('.floating-badge', { opacity: 0, scale: 0.7, stagger: 0.14, duration: 0.6, ease: 'back.out(1.8)' }, '-=0.45');
+  }
+
+  if (typeof ScrollTrigger === 'undefined') return;
+
+  // 3. Multi-Plane Ambient Mesh Orbs Parallax Depth
+  gsap.to('.orb-1', {
+    yPercent: 35,
+    xPercent: -15,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: document.body,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1.2
+    }
+  });
+
+  gsap.to('.orb-2', {
+    yPercent: -45,
+    xPercent: 20,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: document.body,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1.8
+    }
+  });
+
+  gsap.to('.orb-3', {
+    yPercent: 50,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: document.body,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1.4
+    }
+  });
+
+  // 4. Section Headings & Story Chapters Staggered Reveal
+  gsap.utils.toArray('.section-head').forEach(head => {
+    gsap.from(head.children, {
+      opacity: 0,
+      y: 32,
+      duration: 0.75,
+      stagger: 0.12,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: head,
+        start: 'top 88%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+
+  // 5. Featured Projects Showcase Cinematic 3D Reveal
+  gsap.utils.toArray('.project-showcase-card').forEach((card) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 50,
+      scale: 0.96,
+      duration: 0.85,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 86%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+
+  // 6. Skills Matrix Bento Grid Staggered Reveal
+  const skillCards = gsap.utils.toArray('.skill-bento-card');
+  if (skillCards.length > 0) {
+    gsap.from(skillCards, {
+      opacity: 0,
+      y: 40,
+      scale: 0.94,
+      stagger: 0.09,
+      duration: 0.7,
+      ease: 'back.out(1.2)',
+      scrollTrigger: {
+        trigger: '#skills .skills-bento-grid',
+        start: 'top 84%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  }
+
+  // 7. Academic & Experience Timeline Cards Progression
+  gsap.utils.toArray('.timeline-card').forEach((card, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      x: i % 2 === 0 ? -30 : 30,
+      y: 20,
+      duration: 0.8,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 86%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+
+  // 8. Stats & Animated Metric Counters (GSAP Interpolation)
+  gsap.utils.toArray('.counter').forEach(counter => {
+    const target = parseFloat(counter.getAttribute('data-target'));
+    const isDecimal = counter.getAttribute('data-decimal') === 'true';
+    if (isNaN(target)) return;
+
+    const countObj = { val: 0 };
+    ScrollTrigger.create({
+      trigger: counter,
+      start: 'top 90%',
+      once: true,
+      onEnter: () => {
+        gsap.to(countObj, {
+          val: target,
+          duration: 1.6,
+          ease: 'power2.out',
+          onUpdate: () => {
+            counter.textContent = isDecimal ? countObj.val.toFixed(2) : Math.floor(countObj.val);
+          },
+          onComplete: () => {
+            counter.textContent = isDecimal ? target.toFixed(2) : target;
+          }
+        });
+      }
+    });
+  });
+
+  // 9. Resume CTA Banner & Contact Form Entrance
+  const resumeBanner = document.querySelector('.resume-cta-banner');
+  if (resumeBanner) {
+    gsap.from(resumeBanner, {
+      opacity: 0,
+      y: 35,
+      scale: 0.97,
+      duration: 0.8,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: resumeBanner,
+        start: 'top 86%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  }
+
+  const contactCard = document.querySelector('.contact-card-wide');
+  if (contactCard) {
+    gsap.from(contactCard, {
+      opacity: 0,
+      y: 40,
+      duration: 0.85,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: contactCard,
+        start: 'top 86%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  }
+}
+
+function initScrollObserverFallback() {
+  const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-
-        // Check if there are un-animated counters inside
-        const counters = entry.target.querySelectorAll('.counter:not(.counted)');
-        counters.forEach(counter => animateCounter(counter));
       }
     });
   }, { threshold: 0.12 });
-
   reveals.forEach(el => observer.observe(el));
-}
-
-function animateCounter(counter) {
-  counter.classList.add('counted');
-  const target = parseFloat(counter.getAttribute('data-target'));
-  const isDecimal = counter.getAttribute('data-decimal') === 'true';
-  const duration = 1400;
-  const start = performance.now();
-
-  function updateCount(time) {
-    const elapsed = time - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const easeProgress = 1 - Math.pow(1 - progress, 3);
-    const current = easeProgress * target;
-
-    counter.textContent = isDecimal ? current.toFixed(2) : Math.floor(current);
-
-    if (progress < 1) {
-      requestAnimationFrame(updateCount);
-    } else {
-      counter.textContent = isDecimal ? target.toFixed(2) : target;
-    }
-  }
-
-  requestAnimationFrame(updateCount);
 }
 
 /* ==========================================================================
@@ -293,6 +468,7 @@ function initCaseStudyModal() {
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      if (window.lenisInstance) window.lenisInstance.stop();
 
       const dialog = modal.querySelector('.modal-dialog');
       if (dialog) dialog.scrollTop = 0;
@@ -303,6 +479,7 @@ function initCaseStudyModal() {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (window.lenisInstance) window.lenisInstance.start();
   }
 
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
@@ -393,6 +570,7 @@ function initDoraemonResumeAnimation() {
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (window.lenisInstance) window.lenisInstance.stop();
     playSequence();
   }
 
@@ -403,6 +581,7 @@ function initDoraemonResumeAnimation() {
     modal.classList.remove('open', 'running', 'speaking', 'extracting');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (window.lenisInstance) window.lenisInstance.start();
   }
 
   // Direct download button click in modal (allow native download with toast feedback)
@@ -699,27 +878,74 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   13. Buttery-Smooth Scrolling & Reading Progress Indicator
+   13. Buttery-Smooth Lenis Scroll Engine & Internal Link Navigation
    ========================================================================== */
-function initSmoothScroll() {
+let lenisInstance = null;
+
+function initLenisScroll() {
+  if (typeof Lenis === 'undefined') {
+    initFallbackSmoothScroll();
+    return;
+  }
+
+  try {
+    lenisInstance = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.05,
+      touchMultiplier: 1.8,
+    });
+    window.lenisInstance = lenisInstance;
+
+    // Synchronize Lenis scroll events with GSAP ScrollTrigger
+    lenisInstance.on('scroll', () => {
+      if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.update();
+      }
+    });
+
+    if (typeof gsap !== 'undefined') {
+      gsap.ticker.add((time) => {
+        lenisInstance.raf(time * 1000);
+      });
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      function raf(time) {
+        lenisInstance.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+  } catch (err) {
+    console.warn('Lenis initialization fallback:', err);
+    initFallbackSmoothScroll();
+  }
+
   // Smooth scroll for all internal anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (!targetId || targetId === '#' || targetId === '#!') return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        const navbar = document.getElementById('navbar');
-        const navHeight = navbar ? navbar.offsetHeight : 75;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - navHeight - 12;
+        if (lenisInstance) {
+          lenisInstance.scrollTo(targetElement, { offset: -70, duration: 1.2 });
+        } else {
+          const navbar = document.getElementById('navbar');
+          const navHeight = navbar ? navbar.offsetHeight : 75;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navHeight - 12;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
 
         if (history.pushState) {
           history.pushState(null, null, targetId);
@@ -727,18 +953,19 @@ function initSmoothScroll() {
       }
     });
   });
+}
 
-  // Glowing Top Reading Progress Bar
-  const progressBar = document.getElementById('scroll-progress');
-  if (progressBar) {
-    function updateProgress() {
-      const winScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-      progressBar.style.width = `${Math.min(scrolled, 100)}%`;
-    }
+function initFallbackSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#' || targetId === '#!') return;
 
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
-  }
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 }
