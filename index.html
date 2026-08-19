@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhijeet Kumar Gautam — Software Engineer & MCA Student at JNU, New Delhi. Building dynamic full-stack systems and AI applications.">
+  <meta name="author" content="Abhijeet Kumar Gautam">
+  <meta name="theme-color" content="#f8fafc">
+  <title>Abhijeet Kumar Gautam — Software Engineer & MCA (JNU)</title>
+
+  <!-- Typography: Inter & Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dynamic Cursor Glow Spotlight Follower -->
+  <div id="cursor-glow" class="cursor-glow"></div>
+
+  <!-- Background Ambient Animated Mesh Orbs -->
+  <div class="ambient-glow orb-1"></div>
+  <div class="ambient-glow orb-2"></div>
+  <div class="ambient-glow orb-3"></div>
+
+  <!-- Top Sticky Frosted Glass Navbar -->
+  <header class="top-nav-wrapper" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand" aria-label="Home">
+        <div class="brand-badge-wrapper">
+          <span class="brand-badge">AG</span>
+          <span class="badge-ring"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Abhijeet Kumar Gautam</span>
+          <span class="brand-status-pill">
+            <span class="pulse-dot"></span>
+            <span class="status-label">JNU MCA Student</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Capsule -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn theme-toggle-btn" aria-label="Toggle theme" title="Toggle Theme (Press T)">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="assets/Abhijeet_Kumar_Gautam_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-glow nav-resume-btn">
+          <i class="fa-solid fa-eye nav-btn-icon"></i>
+          <span>Preview Resume</span>
+        </a>
+        <button id="mobile-menu-btn" class="icon-btn mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <i class="fa-solid fa-bars" id="mobile-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <div class="mobile-nav-links">
+        <a href="#about" class="mobile-nav-link active"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+        <a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="home">
+
+    <!-- EXPANSIVE FULL-WIDTH HERO SECTION (2-COLUMN) -->
+    <section id="about" class="hero-section reveal">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Narrative & Typewriter -->
+        <div class="hero-left">
+          <div class="hero-badge-pill animate-fade-in">
+            <span class="badge-sparkle"><i class="fa-solid fa-sparkles"></i></span>
+            <span>Seeking Software Engineer & Full-Stack Internships</span>
+            <span class="badge-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+          <h1 class="hero-headline">
+            Hi, I'm <span class="gradient-text">Abhijeet Kumar Gautam</span>
+            <br>
+            <span class="sub-headline">MCA Student @ Jawaharlal Nehru University (JNU)</span>
+          </h1>
+
+          <!-- Dynamic Live Typewriter -->
+          <div class="dynamic-type-bar">
+            <span class="type-prefix">I specialize in </span>
+            <span class="typed-word" id="typed-word"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-bio">
+            Master of Computer Applications (MCA) student at <strong>Jawaharlal Nehru University (JNU), New Delhi</strong>, with an exceptional academic record (<strong>9.45 / 10 CGPA</strong> in B.Sc Computer Science from Pune University). I build scalable full-stack web applications using the <strong>MERN stack, Python, and Google Gemini AI APIs</strong>.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-glow">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="assets/Abhijeet_Kumar_Gautam_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <i class="fa-solid fa-eye"></i>
+              <span>Preview Resume</span>
+            </a>
+            <a href="mailto:gautamabhijeet050@gmail.com" class="btn btn-glass">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Social Channels -->
+          <div class="social-pills-row">
+            <a href="https://github.com/Abhijeet0848" target="_blank" rel="noopener noreferrer" class="social-pill">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/abhijeetkumar-gautam" target="_blank" rel="noopener noreferrer" class="social-pill">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:gautamabhijeet050@gmail.com" class="social-pill">
+              <i class="fa-regular fa-envelope"></i>
+              <span>gautamabhijeet050@gmail.com</span>
+            </a>
+            <a href="tel:+917016110458" class="social-pill">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 70161 10458</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive 3D Terminal & Live Focus Card -->
+        <div class="hero-right">
+          <div class="terminal-card card-tilt">
+            <div class="terminal-header">
+              <div class="term-dots">
+                <span class="t-dot red"></span>
+                <span class="t-dot yellow"></span>
+                <span class="t-dot green"></span>
+              </div>
+              <div class="term-title"><i class="fa-solid fa-terminal"></i> abhijeet_profile.ts</div>
+            </div>
+            <pre class="terminal-code"><code><span class="c-key">const</span> <span class="c-obj">engineer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Abhijeet Kumar Gautam"</span>,
+  <span class="c-prop">university</span>: <span class="c-str">"Jawaharlal Nehru University (JNU)"</span>,
+  <span class="c-prop">degree</span>: <span class="c-str">"MCA (2025 - 2027)"</span>,
+  <span class="c-prop">undergrad</span>: <span class="c-str">"SPPU Pune (B.Sc CS, 9.45/10 CGPA)"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"React"</span>, <span class="c-str">"Node.js"</span>, <span class="c-str">"Python"</span>, <span class="c-str">"MongoDB"</span>],
+  <span class="c-prop">aiIntegration</span>: [<span class="c-str">"Google Gemini 1.5"</span>, <span class="c-str">"NLP & TF-IDF"</span>],
+  <span class="c-prop">status</span>: <span class="c-str">"Open for SDE Internships 🚀"</span>
+};</code></pre>
+            <div class="floating-badge fb-1">
+              <i class="fa-brands fa-react" style="color: #06b6d4;"></i>
+              <span>MERN Stack</span>
+            </div>
+            <div class="floating-badge fb-2">
+              <i class="fa-brands fa-python" style="color: #0284c7;"></i>
+              <span>Python & NLP</span>
+            </div>
+            <div class="floating-badge fb-3">
+              <i class="fa-solid fa-wand-magic-sparkles" style="color: #f59e0b;"></i>
+              <span>Gemini AI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Floating Core Tech Chips Bar -->
+      <div class="floating-tech-strip">
+        <span class="strip-label">Core Tech Stack:</span>
+        <div class="tech-marquee">
+          <span class="f-tag float-1"><i class="fa-brands fa-react" style="color:#06b6d4;"></i> React.js</span>
+          <span class="f-tag float-2"><i class="fa-brands fa-node-js" style="color:#16a34a;"></i> Node.js</span>
+          <span class="f-tag float-3"><i class="fa-brands fa-python" style="color:#0284c7;"></i> Python</span>
+          <span class="f-tag float-1"><i class="fa-solid fa-leaf" style="color:#16a34a;"></i> MongoDB</span>
+          <span class="f-tag float-2"><i class="fa-solid fa-wand-magic-sparkles" style="color:#f59e0b;"></i> Gemini AI</span>
+          <span class="f-tag float-3"><i class="fa-solid fa-database" style="color:#0891b2;"></i> PostgreSQL</span>
+          <span class="f-tag float-1"><i class="fa-brands fa-docker" style="color:#2563eb;"></i> Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPANSIVE ANIMATED METRIC CARDS -->
+    <section class="section-container reveal">
+      <div class="metrics-grid">
+        <div class="metric-card card-tilt">
+          <div class="metric-icon" style="background: rgba(37,99,235,0.08); color: #2563eb;">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="metric-info">
+            <div class="counter-val"><span class="counter" data-target="9.45" data-decimal="true">0</span><span class="c-unit">/10</span></div>
+            <div class="counter-label">B.Sc CS CGPA (SPPU Pune Distinction)</div>
+          </div>
+        </div>
+
+        <div class="metric-card card-tilt">
+          <div class="metric-icon" style="background: rgba(16,185,129,0.08); color: #059669;">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="metric-info">
+            <div class="counter-val">JNU MCA</div>
+            <div class="counter-label">Central University of New Delhi (2025–27)</div>
+          </div>
+        </div>
+
+        <div class="metric-card card-tilt">
+          <div class="metric-icon" style="background: rgba(217,119,6,0.08); color: #d97706;">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="metric-info">
+            <div class="counter-val"><span class="counter" data-target="15">0</span>+</div>
+            <div class="counter-label">Languages, Frameworks & Cloud Tools</div>
+          </div>
+        </div>
+
+        <div class="metric-card card-tilt">
+          <div class="metric-icon" style="background: rgba(124,58,237,0.08); color: #7c3aed;">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="metric-info">
+            <div class="counter-val">ExcelR</div>
+            <div class="counter-label">Full Stack 20-Hour Roadmap Certified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPANSIVE PROJECT SHOWCASE (GRID LAYOUT) -->
+    <section id="projects" class="section-container reveal">
+      <div class="section-head-wrap">
+        <div class="section-head">
+          <div class="head-badge"><i class="fa-solid fa-code-branch"></i> Engineering Works</div>
+          <h2 class="section-heading">Featured Projects & Case Studies</h2>
+          <p class="section-subtext">Production-ready full-stack applications with AI integrations, secure auth, and optimized databases.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filter-bar">
+          <button class="filter-tab active" data-filter="all">All Projects <span class="badge-num">3</span></button>
+          <button class="filter-tab" data-filter="fullstack">Full-Stack <span class="badge-num">1</span></button>
+          <button class="filter-tab" data-filter="ai">AI / NLP <span class="badge-num">1</span></button>
+          <button class="filter-tab" data-filter="web">Web & Database <span class="badge-num">1</span></button>
+        </div>
+      </div>
+
+      <div class="projects-grid-wide" id="projects-grid">
+
+        <!-- Project 1: Smart Placement Portal -->
+        <article class="project-showcase-card card-tilt" data-category="fullstack">
+          <div class="card-top-row">
+            <div class="badge-cluster">
+              <span class="badge-cat badge-blue"><i class="fa-solid fa-wand-magic-sparkles"></i> Full-Stack & Gemini AI</span>
+              <span class="badge-featured"><i class="fa-solid fa-star"></i> Featured</span>
+            </div>
+            <span class="p-year">2025</span>
+          </div>
+
+          <!-- Browser Frame Mockup -->
+          <div class="browser-frame">
+            <div class="browser-frame-bar">
+              <div class="frame-dots">
+                <span class="f-dot red"></span>
+                <span class="f-dot yellow"></span>
+                <span class="f-dot green"></span>
+              </div>
+              <div class="frame-url">
+                <i class="fa-solid fa-lock"></i>
+                <span>https://smart-placement-portal.vercel.app</span>
+              </div>
+              <span class="frame-status"><span class="pulse-green"></span> Live</span>
+            </div>
+            <div class="frame-content">
+              <div class="sim-dashboard">
+                <div class="sim-sidebar">
+                  <div class="sim-avatar"></div>
+                  <div class="sim-bar active"></div>
+                  <div class="sim-bar"></div>
+                  <div class="sim-bar"></div>
+                </div>
+                <div class="sim-main">
+                  <div class="sim-banner" style="background: linear-gradient(135deg, #2563eb, #06b6d4);">
+                    <span>Smart Placement Portal • Gemini 1.5 Pro</span>
+                  </div>
+                  <div class="sim-metrics">
+                    <div class="sim-box"><span class="sb-val">98%</span><span class="sb-lbl">Resume Match</span></div>
+                    <div class="sim-box"><span class="sb-val">AI Mock</span><span class="sb-lbl">Interview Bot</span></div>
+                    <div class="sim-box"><span class="sb-val">RBAC</span><span class="sb-lbl">JWT Auth</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h3 class="card-project-title">Smart Placement Portal</h3>
+            <p class="card-project-desc">
+              A comprehensive recruitment platform featuring <strong>AI-driven resume matching</strong> and simulated mock interviews powered by the <strong>Google Gemini API</strong>, built with the MERN stack.
+            </p>
+
+            <ul class="card-feature-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Role-Based Access Control (RBAC):</strong> Discrete secured workflows for students and recruiters using JWT.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Gemini AI Integration:</strong> Automated semantic resume analysis & customized interview questions.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>MongoDB Indexing:</strong> Structured schemas with compound indexes for fast query latency.</li>
+            </ul>
+
+            <div class="tech-pill-list">
+              <span class="tech-pill"><i class="fa-brands fa-react" style="color:#06b6d4;"></i> React.js</span>
+              <span class="tech-pill"><i class="fa-brands fa-node-js" style="color:#16a34a;"></i> Node.js</span>
+              <span class="tech-pill">Express.js</span>
+              <span class="tech-pill"><i class="fa-solid fa-leaf" style="color:#16a34a;"></i> MongoDB</span>
+              <span class="tech-pill"><i class="fa-solid fa-wand-magic-sparkles" style="color:#f59e0b;"></i> Gemini AI</span>
+              <span class="tech-pill">JWT</span>
+            </div>
+
+            <div class="card-action-bar">
+              <button class="btn btn-sm btn-primary open-modal-btn" data-project="1">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Case Study & Architecture</span>
+              </button>
+              <a href="https://github.com/Abhijeet0848" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub Repo</span>
+              </a>
+              <a href="https://github.com/Abhijeet0848" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: TalentPulse AI -->
+        <article class="project-showcase-card card-tilt" data-category="ai">
+          <div class="card-top-row">
+            <div class="badge-cluster">
+              <span class="badge-cat badge-purple"><i class="fa-solid fa-brain"></i> Machine Learning & NLP</span>
+            </div>
+            <span class="p-year">2025</span>
+          </div>
+
+          <!-- Browser Mockup -->
+          <div class="browser-frame">
+            <div class="browser-frame-bar">
+              <div class="frame-dots">
+                <span class="f-dot red"></span>
+                <span class="f-dot yellow"></span>
+                <span class="f-dot green"></span>
+              </div>
+              <div class="frame-url">
+                <i class="fa-solid fa-lock"></i>
+                <span>https://github.com/Abhijeet0848/TalentPulse-AI</span>
+              </div>
+              <span class="frame-status docker-status"><i class="fa-brands fa-docker"></i> Docker</span>
+            </div>
+            <div class="frame-content">
+              <div class="sim-dashboard">
+                <div class="sim-sidebar">
+                  <div class="sim-avatar" style="background:#7c3aed;"></div>
+                  <div class="sim-bar active" style="background:#7c3aed;"></div>
+                  <div class="sim-bar"></div>
+                  <div class="sim-bar"></div>
+                </div>
+                <div class="sim-main">
+                  <div class="sim-banner" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">
+                    <span>TalentPulse NLP Resume Ranking Engine • Scikit-learn</span>
+                  </div>
+                  <div class="sim-metrics">
+                    <div class="sim-box"><span class="sb-val">Cosine</span><span class="sb-lbl">Similarity</span></div>
+                    <div class="sim-box"><span class="sb-val">&lt;50ms</span><span class="sb-lbl">Latency</span></div>
+                    <div class="sim-box"><span class="sb-val">Docker</span><span class="sb-lbl">Service</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h3 class="card-project-title">TalentPulse AI — Automated Resume Screening</h3>
+            <p class="card-project-desc">
+              An NLP-driven candidate ranking engine using <strong>TF-IDF feature extraction</strong> and <strong>Cosine Similarity</strong> scoring to rank hundreds of resumes against job descriptions with sub-50ms latency.
+            </p>
+
+            <ul class="card-feature-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Automated NLP Pipeline:</strong> Preprocesses text, strips stopwords, and extracts weighted skill tokens.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Visual Analytics:</strong> Generates recruiter match distributions and candidate score breakdowns.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Containerized Architecture:</strong> Fully Dockerized Python Flask backend with PostgreSQL persistence.</li>
+            </ul>
+
+            <div class="tech-pill-list">
+              <span class="tech-pill"><i class="fa-brands fa-python" style="color:#0284c7;"></i> Python</span>
+              <span class="tech-pill"><i class="fa-solid fa-pepper-hot" style="color:#dc2626;"></i> Flask</span>
+              <span class="tech-pill">Scikit-learn</span>
+              <span class="tech-pill">NLP (TF-IDF)</span>
+              <span class="tech-pill"><i class="fa-solid fa-database" style="color:#0284c7;"></i> PostgreSQL</span>
+              <span class="tech-pill"><i class="fa-brands fa-docker" style="color:#2563eb;"></i> Docker</span>
+            </div>
+
+            <div class="card-action-bar">
+              <button class="btn btn-sm btn-primary open-modal-btn" data-project="2">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Case Study & Architecture</span>
+              </button>
+              <a href="https://github.com/Abhijeet0848" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub Repo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Online Result Management System -->
+        <article class="project-showcase-card card-tilt" data-category="web">
+          <div class="card-top-row">
+            <div class="badge-cluster">
+              <span class="badge-cat badge-emerald"><i class="fa-solid fa-database"></i> Web & Database</span>
+            </div>
+            <span class="p-year">2024</span>
+          </div>
+
+          <!-- Browser Mockup -->
+          <div class="browser-frame">
+            <div class="browser-frame-bar">
+              <div class="frame-dots">
+                <span class="f-dot red"></span>
+                <span class="f-dot yellow"></span>
+                <span class="f-dot green"></span>
+              </div>
+              <div class="frame-url">
+                <i class="fa-solid fa-lock"></i>
+                <span>https://github.com/Abhijeet0848/Result-Management-System</span>
+              </div>
+              <span class="frame-status sql-status"><i class="fa-solid fa-database"></i> MySQL</span>
+            </div>
+            <div class="frame-content">
+              <div class="sim-dashboard">
+                <div class="sim-sidebar">
+                  <div class="sim-avatar" style="background:#059669;"></div>
+                  <div class="sim-bar active" style="background:#059669;"></div>
+                  <div class="sim-bar"></div>
+                  <div class="sim-bar"></div>
+                </div>
+                <div class="sim-main">
+                  <div class="sim-banner" style="background: linear-gradient(135deg, #059669, #0891b2);">
+                    <span>Student Academic Result Portal • PHP & AJAX</span>
+                  </div>
+                  <div class="sim-metrics">
+                    <div class="sim-box"><span class="sb-val">Real-Time</span><span class="sb-lbl">AJAX Search</span></div>
+                    <div class="sim-box"><span class="sb-val">3NF</span><span class="sb-lbl">Schema Design</span></div>
+                    <div class="sim-box"><span class="sb-val">Admin</span><span class="sb-lbl">Grade Entry</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h3 class="card-project-title">Online Result Management System</h3>
+            <p class="card-project-desc">
+              A dynamic academic score publication portal allowing administrators to securely record grades and students to query verified semester marks in real-time.
+            </p>
+
+            <ul class="card-feature-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Asynchronous Queries:</strong> AJAX-powered instant result checking with zero full-page refreshes.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Relational Integrity:</strong> Normalized MySQL 3NF database schema to prevent duplicate records.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Admin Dashboard:</strong> Secure batch grade recording and transcript PDF generation.</li>
+            </ul>
+
+            <div class="tech-pill-list">
+              <span class="tech-pill"><i class="fa-brands fa-php" style="color:#8b5cf6;"></i> PHP</span>
+              <span class="tech-pill"><i class="fa-brands fa-js" style="color:#eab308;"></i> JavaScript</span>
+              <span class="tech-pill"><i class="fa-solid fa-database" style="color:#0891b2;"></i> MySQL</span>
+              <span class="tech-pill">AJAX</span>
+              <span class="tech-pill"><i class="fa-brands fa-bootstrap" style="color:#7c3aed;"></i> Bootstrap</span>
+            </div>
+
+            <div class="card-action-bar">
+              <button class="btn btn-sm btn-primary open-modal-btn" data-project="3">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Case Study & Architecture</span>
+              </button>
+              <a href="https://github.com/Abhijeet0848" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub Repo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPANSIVE TECHNICAL SKILLS BENTO GRID (4-COLUMN) -->
+    <section id="skills" class="section-container reveal">
+      <div class="section-head">
+        <div class="head-badge"><i class="fa-solid fa-layer-group"></i> Technical Matrix</div>
+        <h2 class="section-heading">Skills & Technologies</h2>
+        <p class="section-subtext">Tools, frameworks, and engineering fundamentals I use to build scalable systems.</p>
+      </div>
+
+      <div class="skills-bento-wide">
+        <!-- Languages -->
+        <div class="bento-box card-tilt">
+          <div class="box-icon-header">
+            <div class="b-icon" style="color:#2563eb; background:rgba(37,99,235,0.08);"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h4>Programming Languages</h4>
+              <span>Core syntax & algorithms</span>
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="b-tag"><i class="fa-brands fa-js" style="color:#eab308;"></i> JavaScript (ES6+)</span>
+            <span class="b-tag"><i class="fa-brands fa-python" style="color:#0284c7;"></i> Python</span>
+            <span class="b-tag"><i class="fa-brands fa-java" style="color:#ef4444;"></i> Java</span>
+            <span class="b-tag"><i class="fa-solid fa-c" style="color:#6366f1;"></i> C / C++</span>
+            <span class="b-tag"><i class="fa-brands fa-php" style="color:#8b5cf6;"></i> PHP</span>
+            <span class="b-tag"><i class="fa-solid fa-database" style="color:#059669;"></i> SQL</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="bento-box card-tilt">
+          <div class="box-icon-header">
+            <div class="b-icon" style="color:#0891b2; background:rgba(8,145,178,0.08);"><i class="fa-brands fa-react"></i></div>
+            <div>
+              <h4>Frontend Engineering</h4>
+              <span>Interactive interfaces & state</span>
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="b-tag"><i class="fa-brands fa-react" style="color:#06b6d4;"></i> React.js</span>
+            <span class="b-tag"><i class="fa-brands fa-html5" style="color:#ea580c;"></i> HTML5</span>
+            <span class="b-tag"><i class="fa-brands fa-css3-alt" style="color:#2563eb;"></i> CSS3 / SCSS</span>
+            <span class="b-tag"><i class="fa-solid fa-wind" style="color:#06b6d4;"></i> Tailwind CSS</span>
+            <span class="b-tag"><i class="fa-brands fa-bootstrap" style="color:#7c3aed;"></i> Bootstrap</span>
+            <span class="b-tag"><i class="fa-solid fa-arrows-rotate" style="color:#059669;"></i> AJAX & Fetch</span>
+          </div>
+        </div>
+
+        <!-- Backend & AI -->
+        <div class="bento-box card-tilt">
+          <div class="box-icon-header">
+            <div class="b-icon" style="color:#059669; background:rgba(5,150,105,0.08);"><i class="fa-solid fa-server"></i></div>
+            <div>
+              <h4>Backend & AI Services</h4>
+              <span>APIs, authentication & LLMs</span>
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="b-tag"><i class="fa-brands fa-node-js" style="color:#16a34a;"></i> Node.js</span>
+            <span class="b-tag"><i class="fa-solid fa-cubes" style="color:#64748b;"></i> Express.js</span>
+            <span class="b-tag"><i class="fa-solid fa-pepper-hot" style="color:#dc2626;"></i> Flask (Python)</span>
+            <span class="b-tag"><i class="fa-solid fa-wand-magic-sparkles" style="color:#d97706;"></i> Google Gemini AI</span>
+            <span class="b-tag"><i class="fa-solid fa-key" style="color:#eab308;"></i> JWT Auth</span>
+            <span class="b-tag"><i class="fa-solid fa-network-wired" style="color:#0284c7;"></i> RESTful APIs</span>
+          </div>
+        </div>
+
+        <!-- Databases & DevOps -->
+        <div class="bento-box card-tilt">
+          <div class="box-icon-header">
+            <div class="b-icon" style="color:#d97706; background:rgba(217,119,6,0.08);"><i class="fa-solid fa-database"></i></div>
+            <div>
+              <h4>Databases & DevOps</h4>
+              <span>Persistence, containers & cloud</span>
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="b-tag"><i class="fa-solid fa-leaf" style="color:#16a34a;"></i> MongoDB</span>
+            <span class="b-tag"><i class="fa-solid fa-database" style="color:#0284c7;"></i> PostgreSQL</span>
+            <span class="b-tag"><i class="fa-solid fa-table" style="color:#ea580c;"></i> MySQL</span>
+            <span class="b-tag"><i class="fa-solid fa-box-archive" style="color:#0891b2;"></i> SQLite</span>
+            <span class="b-tag"><i class="fa-brands fa-docker" style="color:#2563eb;"></i> Docker</span>
+            <span class="b-tag"><i class="fa-brands fa-git-alt" style="color:#dc2626;"></i> Git & GitHub</span>
+            <span class="b-tag"><i class="fa-solid fa-flask" style="color:#f97316;"></i> Postman</span>
+            <span class="b-tag"><i class="fa-solid fa-cloud" style="color:#64748b;"></i> Vercel</span>
+          </div>
+        </div>
+
+        <!-- Core CS & Relevant Coursework -->
+        <div class="bento-box card-tilt">
+          <div class="box-icon-header">
+            <div class="b-icon" style="color:#7c3aed; background:rgba(124,58,237,0.08);"><i class="fa-solid fa-brain"></i></div>
+            <div>
+              <h4>Relevant Coursework & Core CS</h4>
+              <span>Academic foundations & theory</span>
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="b-tag">Data Structures & Algorithms</span>
+            <span class="b-tag">Database Management Systems</span>
+            <span class="b-tag">Operating Systems</span>
+            <span class="b-tag">Computer Networks</span>
+            <span class="b-tag">Object-Oriented Programming</span>
+            <span class="b-tag">Software Engineering</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills & Professional Strengths -->
+        <div class="bento-box card-tilt">
+          <div class="box-icon-header">
+            <div class="b-icon" style="color:#ec4899; background:rgba(236,72,153,0.08);"><i class="fa-solid fa-users-gear"></i></div>
+            <div>
+              <h4>Soft Skills & Strengths</h4>
+              <span>Collaboration & problem solving</span>
+            </div>
+          </div>
+          <div class="bento-tags">
+            <span class="b-tag"><i class="fa-solid fa-lightbulb" style="color:#eab308;"></i> Analytical Problem Solving</span>
+            <span class="b-tag"><i class="fa-solid fa-brain" style="color:#8b5cf6;"></i> Critical & Logical Thinking</span>
+            <span class="b-tag"><i class="fa-solid fa-people-group" style="color:#06b6d4;"></i> Team Collaboration</span>
+            <span class="b-tag"><i class="fa-solid fa-comments" style="color:#10b981;"></i> Technical Communication</span>
+            <span class="b-tag"><i class="fa-solid fa-shuffle" style="color:#f59e0b;"></i> Adaptability</span>
+            <span class="b-tag"><i class="fa-solid fa-bolt" style="color:#ef4444;"></i> Fast Learner</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & ACHIEVEMENTS (2-COLUMN GRID) -->
+    <section id="education" class="section-container reveal">
+      <div class="section-head">
+        <div class="head-badge"><i class="fa-solid fa-graduation-cap"></i> Academic Path</div>
+        <h2 class="section-heading">Education & Achievements</h2>
+        <p class="section-subtext">Degrees, central university credentials, and verified achievements.</p>
+      </div>
+
+      <div class="timeline-grid-wide">
+        
+        <!-- JNU MCA -->
+        <div class="timeline-card card-tilt">
+          <div class="t-badge-row">
+            <span class="t-badge current-badge"><i class="fa-solid fa-graduation-cap"></i> Master of Computer Applications (MCA)</span>
+            <span class="t-date">2025 — 2027</span>
+          </div>
+          <h3 class="t-title">Jawaharlal Nehru University (JNU), New Delhi</h3>
+          <p class="t-desc">
+            Enrolled in one of India's premier central universities. Focus on advanced software engineering, distributed database systems, algorithms, and AI tools.
+          </p>
+          <div class="t-footer">
+            <span><strong>Current CGPA:</strong> 6.5 / 9.0</span>
+            <span><strong>Location:</strong> New Delhi, India</span>
+          </div>
+        </div>
+
+        <!-- SPPU B.Sc CS -->
+        <div class="timeline-card card-tilt gold-border">
+          <div class="t-badge-row">
+            <span class="t-badge gold-badge"><i class="fa-solid fa-award"></i> Bachelor of Science in Computer Science</span>
+            <span class="t-date">2022 — 2025</span>
+          </div>
+          <h3 class="t-title">Savitribai Phule Pune University (SPPU), Pune</h3>
+          <p class="t-desc">
+            Built rock-solid foundations in C, C++, Java, relational database normalization (3NF), OOP patterns, data structures, and computer networks.
+          </p>
+          <div class="t-footer">
+            <span class="gold-text"><strong>Graduated with:</strong> 9.45 / 10 CGPA</span>
+            <span><strong>Location:</strong> Pune, India</span>
+          </div>
+        </div>
+
+        <!-- Achievements & Certifications -->
+        <div class="timeline-card card-tilt" style="grid-column: 1 / -1;">
+          <div class="t-badge-row">
+            <span class="t-badge"><i class="fa-solid fa-trophy"></i> Key Achievements & Highlights</span>
+            <span class="t-date">Verified Credentials</span>
+          </div>
+          <h3 class="t-title">Professional Milestones & Engineering Excellence</h3>
+          <ul class="card-feature-list" style="margin-top: 0.8rem;">
+            <li><i class="fa-solid fa-circle-check" style="color:#059669;"></i> <strong>ExcelR Full Stack Certification:</strong> Completed 20-hour intensive Full Stack Development training roadmap ecosystem.</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#059669;"></i> <strong>LLM Integration Mastery:</strong> Proficient in integrating Large Language Models (Google Gemini) into production-level web applications.</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#059669;"></i> <strong>Engineering Standards:</strong> Strong analytical problem-solving skills with a focus on writing clean, maintainable, modular code.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESUME ACTION BANNER -->
+    <section class="section-container reveal">
+      <div class="resume-cta-banner card-tilt">
+        <div class="r-banner-left">
+          <span class="r-badge"><i class="fa-regular fa-file-pdf"></i> Curriculum Vitae</span>
+          <h3 class="r-title">Official Engineering Resume</h3>
+          <p class="r-sub">Verified one-page ATS-optimized resume covering JNU MCA, 9.45 CGPA SPPU background, MERN/Python projects, and contact info.</p>
+        </div>
+        <div class="r-banner-right">
+          <a href="assets/Abhijeet_Kumar_Gautam_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-glow">
+            <i class="fa-solid fa-eye"></i>
+            <span>Preview Resume (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH INTERACTIVE FEEDBACK -->
+    <section id="contact" class="section-container reveal">
+      <div class="section-head">
+        <div class="head-badge"><i class="fa-solid fa-envelope"></i> Let's Connect</div>
+        <h2 class="section-heading">Get in Touch</h2>
+        <p class="section-subtext">Open for Software Engineer and Full-Stack Developer internships. Feel free to reach out directly.</p>
+      </div>
+
+      <div class="contact-layout">
+        
+        <!-- Direct Channel Cards -->
+        <div class="contact-channels-col">
+          
+          <div class="contact-info-card card-tilt">
+            <div class="c-icon"><i class="fa-regular fa-envelope"></i></div>
+            <div class="c-content">
+              <span class="c-label">Email Address</span>
+              <span class="c-val" id="email-text">gautamabhijeet050@gmail.com</span>
+            </div>
+            <button class="btn-copy-icon" id="copy-email-btn" title="Copy Email">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+
+          <div class="contact-info-card card-tilt">
+            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="c-content">
+              <span class="c-label">Phone</span>
+              <a href="tel:+917016110458" class="c-val">+91 70161 10458</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card card-tilt">
+            <div class="c-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="c-content">
+              <span class="c-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/abhijeetkumar-gautam" target="_blank" rel="noopener noreferrer" class="c-val">in/abhijeetkumar-gautam</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card card-tilt">
+            <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="c-content">
+              <span class="c-label">GitHub</span>
+              <a href="https://github.com/Abhijeet0848" target="_blank" rel="noopener noreferrer" class="c-val">github.com/Abhijeet0848</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Validated Interactive Message Form -->
+        <div class="contact-form-card card-tilt">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <span class="err-text" id="name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                <span class="err-text" id="email-error"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Hi Abhijeet, we would love to connect regarding an opportunity..." required></textarea>
+              <span class="err-text" id="message-error"></span>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-full btn-glow">
+              <span>Send Message</span>
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Abhijeet Kumar Gautam • MCA Student at JNU, New Delhi.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Abhijeet0848" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/abhijeetkumar-gautam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:gautamabhijeet050@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DORAEMON 4D MAGIC POCKET RESUME ANIMATION MODAL -->
+  <div id="doraemon-modal" class="doraemon-backdrop" aria-hidden="true">
+    <div class="doraemon-stage">
+      <button class="doraemon-close-btn" id="doraemon-close-btn" aria-label="Close">&times;</button>
+      
+      <!-- Speech Bubble -->
+      <div class="doraemon-speech-bubble" id="doraemon-speech">
+        <span class="speech-text">Here is Abhijeet's Magic Resume from my 4D Pocket!</span>
+      </div>
+
+      <!-- Animated Doraemon Character (Pure CSS + SVG) -->
+      <div class="doraemon-character" id="doraemon-actor">
+        
+        <!-- Doraemon Head -->
+        <div class="d-head">
+          <div class="d-face">
+            <div class="d-eyes">
+              <div class="d-eye left"><div class="d-pupil"></div></div>
+              <div class="d-eye right"><div class="d-pupil"></div></div>
+            </div>
+            <div class="d-nose"></div>
+            <div class="d-nose-line"></div>
+            <div class="d-mouth"></div>
+            <div class="d-whiskers left">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="d-whiskers right">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doraemon Collar & Bell -->
+        <div class="d-collar">
+          <div class="d-bell">
+            <div class="bell-line"></div>
+            <div class="bell-hole"></div>
+          </div>
+        </div>
+
+        <!-- Doraemon Body with 4D Pocket -->
+        <div class="d-body">
+          <div class="d-tummy">
+            <!-- 4D Pocket (Yojigen Pocket) -->
+            <div class="d-pocket" id="d-pocket">
+              <div class="pocket-lip"></div>
+              
+              <!-- The Magic Resume Emerging from the Pocket -->
+              <div class="magic-resume-doc" id="magic-resume-doc">
+                <div class="resume-sparkles">✨</div>
+                <div class="doc-header">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <span>RESUME.PDF</span>
+                </div>
+                <div class="doc-lines">
+                  <span class="dl-1"></span>
+                  <span class="dl-2"></span>
+                  <span class="dl-3"></span>
+                </div>
+                <div class="doc-badge">JNU MCA • 9.45 CGPA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animated Hands Reaching into the Pocket -->
+          <div class="d-arm left-arm" id="d-left-arm">
+            <div class="d-hand"></div>
+          </div>
+          <div class="d-arm right-arm" id="d-right-arm">
+            <div class="d-hand"></div>
+          </div>
+        </div>
+
+        <!-- Doraemon Feet -->
+        <div class="d-feet">
+          <div class="d-foot left"></div>
+          <div class="d-foot right"></div>
+        </div>
+      </div>
+
+      <!-- Result Action Card after pulling out -->
+      <div class="doraemon-resume-card" id="doraemon-resume-card">
+        <div class="d-card-title">
+          <i class="fa-solid fa-wand-magic-sparkles" style="color: #f59e0b;"></i>
+          <span>Abhijeet Kumar Gautam — Verified Resume</span>
+        </div>
+        <p class="d-card-sub">Successfully retrieved from the 4D Pocket!</p>
+        <div class="d-action-row">
+          <a href="assets/Abhijeet_Kumar_Gautam_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow" id="d-direct-preview">
+            <i class="fa-solid fa-eye"></i>
+            <span>Preview Resume (PDF)</span>
+          </a>
+          <a href="assets/Abhijeet_Kumar_Gautam_Resume.pdf" download="Abhijeet_Kumar_Gautam_Resume.pdf" class="btn btn-secondary" id="d-direct-download">
+            <i class="fa-solid fa-download"></i>
+            <span>Download</span>
+          </a>
+          <button class="btn btn-glass" id="d-replay-btn" title="Replay Animation">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Animated Sparkle Particles Container -->
+      <div class="sparkle-particles" id="sparkle-particles"></div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY DETAILS MODAL -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="modal-content-slot" class="modal-content-body"></div>
+    </div>
+  </div>
+
+  <!-- Interactive Toast Notification -->
+  <div id="toast" class="toast-popup"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
