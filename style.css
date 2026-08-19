@@ -2550,20 +2550,69 @@ ul {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN (ALL DISPLAY SIZES: 4K, LAPTOP, TABLET, MOBILE, COMPACT)
    ========================================================================== */
-@media (max-width: 1100px) {
+
+/* 1. Large Displays & 4K (>= 1440px) */
+@media (min-width: 1440px) {
+  .page-container, .nav-inner, .footer-inner {
+    max-width: 1400px;
+  }
+
+  .hero-headline {
+    font-size: 3.8rem;
+  }
+}
+
+/* 2. Small Laptops & Desktops (<= 1200px) */
+@media (max-width: 1200px) {
+  .nav-inner {
+    padding: 0.85rem 1.8rem;
+  }
+
+  .page-container {
+    padding: 0 1.8rem;
+  }
+
+  .nav-menu {
+    gap: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0.38rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-headline {
+    font-size: 3rem;
+  }
+
+  .hero-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* 3. Tablets Landscape (<= 1024px) */
+@media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
+  }
+
+  .hero-right {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .metrics-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
   }
 
   .skills-bento-wide {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
   }
 
   .timeline-grid-wide {
@@ -2572,20 +2621,30 @@ ul {
 
   .contact-layout {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projects-grid-wide {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
 
+/* 4. Tablets Portrait & Large Phones (<= 768px) */
 @media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
   .page-container {
     padding: 0 1.2rem;
   }
 
   .nav-inner {
-    padding: 0.95rem 1.2rem;
+    padding: 0.8rem 1.2rem;
   }
 
-  .hero-headline {
-    font-size: 2.4rem;
+  .nav-brand .brand-name {
+    font-size: 0.92rem;
   }
 
   .nav-menu {
@@ -2600,30 +2659,281 @@ ul {
     display: block;
   }
 
+  .hero-section {
+    padding: 3rem 0 2rem 0;
+  }
+
+  .hero-headline {
+    font-size: 2.35rem;
+    line-height: 1.2;
+  }
+
+  .sub-headline {
+    font-size: 1.1rem;
+  }
+
+  .dynamic-type-bar {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .hero-cta-group .btn {
+    flex: 1 1 180px;
+  }
+
+  .social-pills-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .social-pill {
+    font-size: 0.82rem;
+    padding: 0.4rem 0.85rem;
+  }
+
+  .terminal-card {
+    padding: 1rem 1.2rem;
+  }
+
+  .terminal-code code {
+    font-size: 0.78rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .floating-badge {
+    display: none;
+  }
+
+  .floating-tech-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.85rem 1.2rem;
+  }
+
+  .tech-marquee {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
   .metrics-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section-container {
+    margin-bottom: 4rem;
+  }
+
+  .section-head-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .project-filter-bar {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.4rem;
+    justify-content: flex-start;
+  }
+
+  .filter-tab {
+    white-space: nowrap;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.82rem;
   }
 
   .projects-grid-wide {
     grid-template-columns: 1fr;
+    gap: 1.6rem;
   }
 
   .skills-bento-wide {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .bento-box {
+    padding: 1.3rem;
+  }
+
+  .timeline-card {
+    padding: 1.4rem;
+  }
+
+  .t-badge-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .t-footer {
+    flex-direction: column;
+    gap: 0.4rem;
   }
 
   .resume-cta-banner {
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem;
+    padding: 2rem 1.4rem;
+    gap: 1.5rem;
+  }
+
+  .r-banner-right, .r-banner-right .btn {
+    width: 100%;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   .footer-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 0 1.2rem;
+  }
+
+  /* Modals on Mobile */
+  .modal-dialog {
+    width: 95%;
+    max-height: 90vh;
+    padding: 1.8rem 1.4rem;
+  }
+
+  .doraemon-stage {
+    max-width: 94vw;
+    max-height: 92vh;
+    padding: 1.8rem 1.2rem 1.5rem 1.2rem;
+  }
+
+  .doraemon-character {
+    transform: scale(0.85);
+    margin: -10px 0;
+  }
+
+  .d-action-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .d-action-row .btn {
+    width: 100%;
+  }
+}
+
+/* 5. Compact Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 14.5px;
+  }
+
+  .page-container {
+    padding: 0 0.9rem;
+  }
+
+  .nav-inner {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .brand-badge {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
+  .brand-info .brand-status-pill {
+    display: none;
+  }
+
+  .hero-headline {
+    font-size: 1.95rem;
+  }
+
+  .sub-headline {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .card-action-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-action-bar .btn {
+    width: 100%;
+  }
+
+  .case-study-actions {
+    flex-direction: column;
+  }
+
+  .case-study-actions .btn {
+    width: 100%;
+  }
+
+  .bento-tags {
+    gap: 0.4rem;
+  }
+
+  .b-tag {
+    font-size: 0.76rem;
+    padding: 0.32rem 0.65rem;
+  }
+
+  .toast-popup {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    text-align: center;
+  }
+
+  .doraemon-stage {
+    padding: 1.4rem 0.85rem;
+  }
+
+  .doraemon-character {
+    transform: scale(0.72);
+    margin: -25px 0 -15px 0;
+  }
+
+  .doraemon-speech-bubble {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* 6. Ultra-Compact / Foldable Displays (<= 360px) */
+@media (max-width: 360px) {
+  .hero-headline {
+    font-size: 1.7rem;
+  }
+
+  .hero-badge-pill {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .social-pill span {
+    font-size: 0.75rem;
+  }
+
+  .doraemon-character {
+    transform: scale(0.62);
+    margin: -35px 0 -25px 0;
   }
 }
