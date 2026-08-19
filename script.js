@@ -346,6 +346,15 @@ function initCinematicGSAPStorytelling() {
       }
     });
   }
+
+  // Refresh ScrollTrigger positions after DOM setup
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+
+  window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
+  });
 }
 
 function initScrollObserverFallback() {
