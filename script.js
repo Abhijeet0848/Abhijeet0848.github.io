@@ -211,6 +211,7 @@ const projectData = {
     badge: "Full-Stack & Gemini AI",
     title: "Smart Placement Portal",
     desc: "A full-stack campus placement management web application built with the MERN stack and Google Gemini AI to assist college placement cells and applicants.",
+    isPrivate: true,
     keyChallenges: [
       "Implemented role-based authentication (Students vs. Recruiters) using JSON Web Tokens (JWT) and bcrypt password hashing.",
       "Integrated Google Gemini API to assist in automated resume skill analysis and job matching suggestions.",
@@ -284,6 +285,7 @@ function initCaseStudyModal() {
         </div>
 
         <div class="case-study-actions">
+          ${data.isPrivate ? `<button type="button" class="btn btn-secondary private-repo-btn"><i class="fa-brands fa-github"></i> View GitHub Repository</button>` : (data.githubUrl ? `<a href="${data.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fa-brands fa-github"></i> View GitHub Repository</a>` : '')}
           ${data.liveUrl ? `<a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Link</a>` : ''}
         </div>
       `;
@@ -592,19 +594,31 @@ function initKeyboardShortcuts() {
 }
 
 /* ==========================================================================
-   11. Interactive Toast Popup
+   11. Interactive Toast Popup & Private Repo Notifications
    ========================================================================== */
+let toastTimeout;
 function showToast(msg) {
   const toast = document.getElementById('toast');
   if (!toast) return;
 
+  if (toastTimeout) clearTimeout(toastTimeout);
   toast.textContent = msg;
   toast.style.display = 'block';
 
-  setTimeout(() => {
+  toastTimeout = setTimeout(() => {
     toast.style.display = 'none';
-  }, 2800);
+  }, 3000);
 }
+
+// Global click handler for private repo buttons (both project cards & modals)
+document.addEventListener('click', (e) => {
+  const privateBtn = e.target.closest('.private-repo-btn');
+  if (privateBtn) {
+    e.preventDefault();
+    e.stopPropagation();
+    showToast('🔒 This repository is currently private.');
+  }
+});
 
 /* ==========================================================================
    12. Modern Navbar: Scroll Elevation, ScrollSpy & Mobile Drawer
