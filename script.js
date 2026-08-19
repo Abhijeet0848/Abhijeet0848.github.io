@@ -218,8 +218,8 @@ const projectData = {
       "Optimized MongoDB collection schemas and compound indexing to ensure sub-100ms response times on candidate searches."
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Gemini AI", "JWT", "Tailwind CSS"],
-    githubUrl: "https://github.com/Abhijeet0848",
-    liveUrl: "https://smart-placement-portal.vercel.app"
+    githubUrl: "https://github.com/Abhijeet0848/Placement-portal",
+    liveUrl: "https://github.com/Abhijeet0848/Placement-portal"
   },
   "2": {
     badge: "AI / NLP & Backend",
@@ -232,8 +232,8 @@ const projectData = {
       "Packaged backend services into Docker containers backed by PostgreSQL for reproducible production deployment."
     ],
     techStack: ["Python", "Flask", "Scikit-learn", "NLP (TF-IDF)", "PostgreSQL", "Docker", "Pandas"],
-    githubUrl: "https://github.com/Abhijeet0848/TalentPulse-AI",
-    liveUrl: "https://github.com/Abhijeet0848"
+    githubUrl: "https://github.com/Abhijeet0848/-TalentPulse-AI-Intelligent-Resume-Screening-Talent-Intelligence-Platform",
+    liveUrl: "https://github.com/Abhijeet0848/-TalentPulse-AI-Intelligent-Resume-Screening-Talent-Intelligence-Platform"
   },
   "3": {
     badge: "Web & Database",
@@ -245,8 +245,8 @@ const projectData = {
       "Constructed a secure administrator portal for batch grade entry, student roll-number management, and PDF report exports."
     ],
     techStack: ["PHP", "JavaScript", "MySQL", "AJAX", "Bootstrap 5", "HTML5", "CSS3"],
-    githubUrl: "https://github.com/Abhijeet0848/Result-Management-System",
-    liveUrl: "https://github.com/Abhijeet0848"
+    githubUrl: "https://github.com/Abhijeet0848/Online-result-system-perfect",
+    liveUrl: "https://github.com/Abhijeet0848/Online-result-system-perfect"
   }
 };
 
