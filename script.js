@@ -596,10 +596,10 @@ function initDoraemonResumeAnimation() {
       createSparkles();
     }, 1800);
 
-    // 4. Exactly at 4 seconds: Direct open resume in new tab without requiring second click
+    // 4. Removed auto-open to allow user to manually click the preview/download buttons
     autoOpenTimer = setTimeout(() => {
-      openResumeDirectly();
-      closeDoraemon();
+      // openResumeDirectly();
+      // closeDoraemon();
     }, 4000);
   }
 
