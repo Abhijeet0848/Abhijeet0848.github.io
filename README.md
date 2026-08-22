@@ -3,7 +3,7 @@
 Welcome to the repository for my personal portfolio website! This site showcases my projects, technical skills, education, and achievements as a Full-Stack Developer and MCA student at Jawaharlal Nehru University (JNU).
 
 ## 🚀 Live Demo
-*(Add your live URL here if hosted, e.g., https://abhijeet0848.github.io/abhijeet-jnu/)*
+http://abhijeet.qd.je
 
 ## 💡 About Me
 I'm a Master of Computer Applications (MCA) student at **JNU, New Delhi** (2025 - 2027), with a strong B.Sc. Computer Science background from SPPU Pune (9.45/10 CGPA). I specialize in the **MERN stack, Python, and AI applications** (like Google Gemini APIs and NLP). I am passionate about building full-stack web applications and intelligent solutions.
