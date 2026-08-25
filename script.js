@@ -18,6 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initEmailCopy();
   initContactForm();
   initKeyboardShortcuts();
+
+  // Prevent # hash from appearing in URL when clicking navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault(); // Prevents the hash from appearing in URL
+        
+        // Use Lenis for smooth scroll if available, else fallback
+        if (window.lenisInstance) {
+          window.lenisInstance.scrollTo(targetElement);
+        } else {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
 });
 
 /* ==========================================================================

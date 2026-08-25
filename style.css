@@ -76,6 +76,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Add smooth transition for theme switching */
+  transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease, box-shadow 1.2s ease;
 }
 
 html {
@@ -144,7 +146,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   position: relative;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 1.2s ease, color 1.2s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
