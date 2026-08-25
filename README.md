@@ -2,7 +2,9 @@
 
 Welcome to the repository for my personal portfolio website! This site showcases my projects, technical skills, education, and achievements as a Full-Stack Developer and MCA student at Jawaharlal Nehru University (JNU).
 
-## 🚀 Live Demo
+## 🚀 Live
+
+https://abhijeet-jnu.pages.dev
 http://abhijeet.qd.je
 
 ## 💡 About Me
