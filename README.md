@@ -5,7 +5,7 @@ Welcome to the repository for my personal portfolio website! This site showcases
 ## 🚀 Live
 
 https://abhijeet-jnu.pages.dev
-http://abhijeet.qd.je
+http://abhijnu.qd.je
 
 ## 💡 About Me
 I'm a Master of Computer Applications (MCA) student at **JNU, New Delhi** (2025 - 2027), with a strong B.Sc. Computer Science background from SPPU Pune (9.45/10 CGPA). I specialize in the **MERN stack, Python, and AI applications** (like Google Gemini APIs and NLP). I am passionate about building full-stack web applications and intelligent solutions.
