@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abhijnu.qd.je/sitemap.xml
+Sitemap: https://abhijeet0848.github.io/sitemap.xml
